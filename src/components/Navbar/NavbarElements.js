@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {Link as LinkR} from 'react-router-dom'
 
 export const Nav = styled.nav`
-    background: ${({scrollNav})=>(scrollNav ? '#01BF71' : 'transparent')};
+    background: ${({scrollNav})=>(scrollNav ? 'rgb(64 64 65)' : 'transparent')};
     height: 80px;
     margin-top: -80px;
     display: flex;
@@ -22,7 +22,7 @@ export const NavbarContainer = styled.div`
 
     display: flex;
     justify-content: space-between;
-    height: 8px;
+    height: 12px;
     z-index: 1;
     width: 100%;
     padding: 0 24px;
@@ -33,9 +33,10 @@ export const NavbarContainer = styled.div`
 export const NavLogo = styled(LinkR)`
 
     color: #fff;
+    width: 20px;
+    font-size: 24px;
     justify-self: flex-start;
     cursor: pointer;
-    font-size: 1.5rem;
     display: flex;
     align-items: center;
     margin-left: 24px;
@@ -45,6 +46,11 @@ export const NavLogo = styled(LinkR)`
 
 `;
 
+export const Img = styled.img`
+    width: calc(20px + 2vw);
+    margin-right: 15px;
+`
+
 export const MobileIcon = styled.div`
 
     display: none;
@@ -52,6 +58,7 @@ export const MobileIcon = styled.div`
     @media screen and (max-width: 768px){
         display: block;
         position: absolute;
+        margin-top: 12px;
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import {FaBars} from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import logo from '../../images/bhr.png'
 import { animateScroll as scroll } from 'react-scroll';
 import { Nav,
          NavbarContainer, 
@@ -9,6 +10,7 @@ import { Nav,
          NavMenu, 
          NavItem, 
          NavLinks,
+         Img
         } from './NavbarElements'; 
 
 const Navbar = ({ toggle}) => {
@@ -37,7 +39,8 @@ const Navbar = ({ toggle}) => {
         <Nav scrollNav={scrollNav}>
               <NavbarContainer> 
                   <NavLogo to="/" onClick={toggleHome}>
-                      BeyondHRM
+                      <Img src={logo} alt=""/> 
+                      BEYONDHR
                   </NavLogo>
 
                   <MobileIcon onClick={toggle}>
